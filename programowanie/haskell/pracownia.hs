@@ -1,27 +1,27 @@
--- Kamil Ba³dyga, 209184
+-- Kamil Baï¿½dyga, 209184
 import Monad (mzero)
 import List (delete,(\\))
 import System(getArgs)
 
--- sasiadami elementu na planszy, s± inne elementy, które nale¿± do
--- listy plansza (w przypadku programu bêd± to pola jeszcze nie zajête),
--- które le¿± na lewo,prawo,góra,dó³ od danego elementu (warunek parzystosc)
+-- sasiadami elementu na planszy, sï¿½ inne elementy, ktï¿½re naleï¿½ï¿½ do
+-- listy plansza (w przypadku programu bï¿½dï¿½ to pola jeszcze nie zajï¿½te),
+-- ktï¿½re leï¿½ï¿½ na lewo,prawo,gï¿½ra,dï¿½ od danego elementu (warunek parzystosc)
 sasiad plansza (x,y) =
   [ (a,b) | (a,b) <-plansza, abs(a-x)<=1, abs(b-y)<=1,
     parzystosc (a+b) (x+y) ] where parzystosc a b = (even a&&odd b)||(odd a&&even b)
--- plansza to lista par wspolrzednych, takich, które nie znajduj± siê na li¶cie wejscie
+-- plansza to lista par wspolrzednych, takich, ktï¿½re nie znajdujï¿½ siï¿½ na liï¿½cie wejscie
 -- wejscie jest w formacie [ ((x1,y1),(x2,y2)) ]
 plansza wejscie n m =
   [ (x,y) | x<-[1..n], y<-[1..m], not ((x,y) `elem` zajete) ]
   where
     zajete = let (g1,g2) = unzip wejscie in g1++g2
 
--- rozwi±zanie zaczyna siê od wygenerowania planszy
+-- rozwiï¿½zanie zaczyna siï¿½ od wygenerowania planszy
 -- wtedy stosujemy prostego dfs'a
--- dla ka¿dego elementu z listy wej¶ciowej, bierzemy pierwszy element pary
--- i przechodzimy ca³± planszê, a¿ natrafimy na drugi element pary.
--- ca³± ¶cie¿kê zapisujemy i wywo³ujemy na kolejnej parze wej¶ciowej, oraz na
--- planszy pomniejszonej o przed chwil± wygenerowan± ¶cie¿kê
+-- dla kaï¿½dego elementu z listy wejï¿½ciowej, bierzemy pierwszy element pary
+-- i przechodzimy caï¿½ï¿½ planszï¿½, aï¿½ natrafimy na drugi element pary.
+-- caï¿½ï¿½ ï¿½cieï¿½kï¿½ zapisujemy i wywoï¿½ujemy na kolejnej parze wejï¿½ciowej, oraz na
+-- planszy pomniejszonej o przed chwilï¿½ wygenerowanï¿½ ï¿½cieï¿½kï¿½
 solve pary n m =
   wszystkie pary (plansza pary n m) []
   where
