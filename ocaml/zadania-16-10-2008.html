@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<title>Programowanie funkcyjne</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+<style type="text/css">
+body { font-family: sans-serif }
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td>
+<table cellpadding="20">
+<tr>
+<td>
+<b>Programowanie funkcyjne, II UWr, 2008/09<br>
+Lista zadań nr 2 (na 16.10.2008)</b> 
+</td>
+</tr> 
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table cellpadding="20">
+<tr>
+<th>
+Część I
+</th>
+</tr>
+<tr>
+<td>
+<h4>Zadanie 1 (2p.)</h4>
+Napisz funkcję znajdującą wszystkie podlisty listy zadanej jako argument.
+</td>
+</tr>
+<tr>
+<td>
+<h4>Zadanie 2 (2p.)</h4>
+Stosując rekursję ogonową, napisz funkcję obliczającą n-ty wyraz ciągu zdefiniowanego wzorem:
+<ul>
+<li> a<sub>0</sub> = 1
+<li> a<sub>1</sub> = 2
+<li> a<sub>n</sub> = 2 * a<sub>n-2</sub> - a<sub>n-1</sub> + 1 dla n>1
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<h4>Zadanie 3 (2p.)</h4>  Napisz dwie wersje funkcji (w tym jedną za
+pomocą rekursji ogonowej), która dla zadanej listy
+polimorficznej <tt>l:'a list</tt> oraz funkcji <tt>f:'a -> 'b</tt>
+zwraca listę typu <tt>'b list</tt>, będącą odwróceniem
+listy <tt>l</tt> przetworzonej przez działanie funkcji <tt>f</tt>.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table cellpadding="20">
+<tr>
+<th colspan="2">
+Część II
+</th>
+</tr>
+<tr>
+<td>
+<h4>Zadanie 4 (3p.)</h4> 
+<ol>
+<li> 
+Napisz funkcję merge, która łączy dwie listy posortowane rosnąco w
+pewnym porządku <tt><=</tt> tak, by wynik działania funkcji był także
+listą posortowaną rosnąco w tym samym porządku. Argumentami
+funkcji merge powinny być: funkcja <tt>cmp</tt> typu <tt>'a -> 'a -> bool</tt>
+(zakładamy, że <tt>cmp a b = true</tt>, gdy <tt>a<=b</tt>), i dwie listy elementów
+typu <tt>'a</tt>.  Przykład: <tt>merge (<=) [1;2;5] [3;4;5]</tt> utworzy listę
+<tt>[1;2;3;4;5;5]</tt>.
+
+<li> Zapisz tę funkcję używając rekursji ogonowej i skonstruuj
+przykład pokazujący różnicę w efektywności tych dwóch definicji.
+
+<li> Wykorzystaj funkcję merge do napisania funkcji sortowania przez
+    scalanie.
+</ol>
+</td>
+</tr>
+<tr>
+<td>
+<h4>Zadanie 5 (3p.)</h4> 
+Napisz funkcję zwracającą listę wszystkich permutacji zadanej listy.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

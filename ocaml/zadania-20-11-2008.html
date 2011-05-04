@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Programowanie funkcyjne</title>
+
+  
+    
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+    <style type="text/css">
+      body { font-family: sans-serif }
+    </style></head><body>
+    <table>
+      <tbody>
+	<tr>
+	  <td>
+	    <table cellpadding="20">
+	      <tbody>
+		<tr>
+		  <td>
+		    <b>Programowanie funkcyjne, II UWr, 2008/09<br>
+		      Lista zadań nr 7 (na 20.11.2008)</b> 
+		  </td>
+		</tr> 
+	    </tbody>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <table cellpadding="20" width="100%">
+	      <tbody>
+		<tr>
+		  <th>
+		    Część I
+		  </th>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 1 (6p.)</h4>
+		    Technika memoizacji pozwala wykorzystać
+		    cechy imperatywne języka w celu zwiększenia efektywności działania
+		    funkcji, która sama jest czysto funkcyjna, tj. kolejne wywołanie
+		    takiej funkcji dla tego samego argumentu zwróci tę samą
+		    wartość. Memoizacja polega na zapamiętywaniu wartości wywołań funkcji
+		    dla konkretnych argumentów w pewnej strukturze danych, i na
+		    wyszukiwaniu potrzebnych wartości przy kolejnych wywołaniach tej
+		    funkcji.
+
+		    Aby umożliwić memoizację dowolnej funkcji, zaimplementuj następujący schemat:
+		    <ul>
+		      <li>
+			zdefiniuj typ polimorficzny służący jako tablica wartości
+			wywołań dowolnej funkcji
+		      </li>
+		      <li>
+			napisz funkcję tworzenia pustej tablicy
+		      </li>
+		      <li>
+			napisz funkcję wyszukiwania w tablicy wartości funkcji dla
+			zadanego argumentu
+		      </li>
+		      <li>
+			napisz funkcję dopisującą do tablicy nową wartość wywołania funkcji
+		      </li>
+		    </ul>
+		    <br>
+		    Wykorzystaj ten schemat do memoizacji funkcji wyznaczającej kolejne
+		    liczby Fibonacciego: napisz funkcję <tt>fib : int -&gt; int</tt> według
+		    standardowej definicji oraz funkcję <tt>fib_memo : int -&gt; int</tt> wykorzystującą
+		    memoizację.  Porównaj czasy wykonania obu funkcji.
+		    <br>
+		    Czy funkcja <tt>fib_memo</tt> spełnia Twoje oczekiwania w kwestii
+		    efektywności? Zmodyfikuj schemat memoizacji dla tej funkcji, aby
+		    maksymalnie wykorzystać tę technikę.
+		  </td>
+		</tr>
+	      </tbody>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <table cellpadding="20" width="100%">
+	      <tbody>
+		<tr>
+		  <th>
+		    Część II
+		  </th>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 2 (3p.)</h4>
+		    Napisz funkcję <tt>fresh</tt> typu <tt>string -&gt; string</tt>, której kolejne wywołania mają następujący efekt:
+<pre>
+# fresh "x";;
+- : string = "x1"
+# fresh "x";;
+- : string = "x2"
+# fresh "x";;
+- : string = "x3"
+# fresh "y";;
+- : string = "y4"
+</pre>
+		    itd... oraz funkcję <tt>reset</tt> typu <tt>int -&gt; unit</tt>, która ustawia początkową wartość
+		    generowanego indeksu dla następnych wywołań funkcji <tt>fresh</tt>, np.
+<pre># fresh "x";;
+- : string = "x1"
+# fresh "x";;
+- : string = "x2"
+# reset 5;;
+- : unit = ()
+# fresh "x";;
+- : string = "x6"
+# fresh "x";;
+- : string = "x7"
+</pre>   
+		    Uwaga! Funkcje nie mogą wykorzystywać żadnych zmiennych globalnych.  
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 3 (4p.)</h4>
+		    Definiujemy typ danych do reprezentacji drzew binarnych przechowujących
+		    wartości zarówno w węzłach jak i w liściach:
+		    <blockquote>
+		      <tt>
+		      type 'a btree = Leaf of 'a 
+		                    | Node of 'a btree * 'a * 'a btree
+		      </tt>
+		    </blockquote>
+		    Rozważmy problem ponumerowania węzłów i liści
+		    drzewa przy przechodzeniu go wszerz. Na przykład,
+		    tak ponumerowaną wersją drzewa
+		    <blockquote>
+		      <tt>Node (Node (Leaf 'a', 'b', Leaf 'c'), 'd', Leaf 'e')</tt>
+		    </blockquote>
+		    jest
+		    <blockquote>
+		      <tt>Node (Node (Leaf 4, 2, Leaf 5), 1, Leaf 3)</tt>.
+		    </blockquote>
+			Napisz czysto funkcyjną funkcję numerującą drzewo wszerz.
+		  </td>
+		</tr>
+	      </tbody>
+	    </table>
+	  </td>
+	</tr>
+</tbody>
+</table>
+
+</body></html>

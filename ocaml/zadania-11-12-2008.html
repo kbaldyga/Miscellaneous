@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Programowanie funkcyjne</title>
+
+  
+    
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+    <style type="text/css">
+      body { font-family: sans-serif }
+    </style></head><body>
+    <table>
+      <tbody>
+	<tr>
+	  <td>
+	    <table cellpadding="20">
+	      <tbody>
+		<tr>
+		  <td>
+		    <b>Programowanie funkcyjne, II UWr, 2008/09<br>
+		      Lista zadań nr 10 (na 11.12.2008)</b> 
+		  </td>
+		</tr> 
+	    </tbody>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <table cellpadding="20" width="100%">
+	      <tbody>
+		<tr>
+		  <th>
+		    Część I
+		  </th>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 1 (4p.)</h4>
+		    Rozważmy definicję klasy abstrakcyjnej <tt>drawable</tt>, która
+		    potrafi narysować kolorowy, wypełniony wielokąt na płaszczyźnie, mając daną
+		    tablicę wierzchołków i kolor:
+<pre>
+class virtual drawable =
+object (self)
+
+  method virtual vertices : (int * int) array 
+  method virtual color : Graphics.color
+
+  method draw = (Graphics.set_color (self#color); 
+                 Graphics.fill_poly (self#vertices))
+
+end
+</pre>
+
+Poprzez dziedziczenie możemy wykorzystać tę klasę do rysowania
+dowolnych wielokątów.
+<ul>
+<li>Zdefiniuj klasę <tt>polygon</tt>, która dziedziczy <tt>drawable</tt> i
+jest sparametryzowana przez tablicę wierzchołków. Dodaj metodę
+  umożliwiającą zmianę koloru wielokąta.</li>
+
+<li>Korzystając z faktu, że prostokąt jest specjalnym rodzajem
+  wielokąta, a kwadrat jest specjalnym rodzajem prostokąta, zdefiniuj
+  dwie kolejne klasy <tt>rectangle</tt> i <tt>square</tt>, korzystając
+  efektywnie z mechanizmu dziedziczenia i parametryzując odpowiednio
+  obie klasy. </li>
+<li>Napisz program rysujący kilka wielokątów w różnych kolorach.</li>
+</ul>
+<b>Uwaga:</b> nie używaj pól mutowalnych - implementacja ma być czysto funkcyjna.
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 2 (2p.)</h4>  
+		    Zdefiniuj polimorficzną
+klasę <tt>collection</tt> służącą do przechowywania i obsługi zbioru
+obiektów (użyj listy do reprezentacji tej kolekcji). W szczególności,
+klasa ta powinna implementować metodę <tt>add</tt> - dodawania obiektu
+do kolekcji oraz metodę <tt>draw_all</tt> - rysowania wszystkich
+obiektów z kolekcji na płaszczyźnie (zakładając, że każdy obiekt implementuje
+metodę <tt>draw</tt>). Jaki jest typ tej klasy?
+<br>
+Wykorzystaj tę klasę do zdefiniowania kolekcji kilku różnych,
+kolorowych wielokątów. Przetestuj implementację.
+		  </td>
+		</tr>
+
+	      </tbody>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <table cellpadding="20" width="100%">
+	      <tbody>
+		<tr>
+		  <th>
+		    Część II
+		  </th>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 3 (6p.)</h4>  
+Rozszerz implementację wielokątów o możliwość ich
+transformacji: przesunięcia, obrotu i skalowania (ewentualnie
+animowania). Jako ilustrację wygeneruj obrazek z płatkami śniegu
+(ewentualnie animację padających płatków śniegu).
+		  </td>
+		</tr>
+	      </tbody>
+	    </table>
+	  </td>
+	</tr>
+</tbody>
+</table>
+
+</body></html>

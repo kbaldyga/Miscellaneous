@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Programowanie funkcyjne</title>
+
+  
+    
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+    <style type="text/css">
+      body { font-family: sans-serif }
+    </style></head><body>
+    <table>
+      <tbody>
+	<tr>
+	  <td>
+	    <table cellpadding="20">
+	      <tbody>
+		<tr>
+		  <td>
+		    <b>Programowanie funkcyjne, II UWr, 2008/09<br>
+		      Lista zadań nr 8 (na 27.11.2008)</b> 
+		  </td>
+		</tr> 
+	    </tbody>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <table cellpadding="20" width="100%">
+	      <tbody>
+		<tr>
+		  <th>
+		    Część I
+		  </th>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 1 (4p.)</h4>
+		    Nie używając rekursji (tj. konstrukcji <tt>let rec</tt>) zdefiniuj
+		    funkcję obliczającą silnię (użyj referencji).
+		    W podobny sposób zdefiniuj funkcję <tt>fix</tt> (operator stałopunktowy) 
+		    typu <tt>(('a->'b)->'a->'b)->'a->'b</tt>. 
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 2 (4p.)</h4>  Zbiór Mandelbrota to
+		    zbiór punktów na płaszczyźnie zespolonej o
+		    własności: M = { p : &forall; n, |z<sub>n</sub>|
+		    <2 }, gdzie ciąg {z<sub>n</sub>} jest zdefiniowany
+		       następująco:
+		       <ul>
+			 <li> z<sub>0</sub> = p</li>
+			 <li> z<sub>n+1</sub> = z<sub>n</sub>*z<sub>n</sub> + p </li>
+			 
+		       </ul>
+		       Przybliżenie tego zbioru wyznaczamy przez
+		       obliczenie pewnej liczby wyrazów ciągu
+		       {z<sub>n</sub>} (ograniczonej przez pewną
+		       stałą) i uznajemy, że dany punkt p należy do
+		       zbioru, jeśli każdy z obliczonych wyrazów ma
+		       moduł mniejszy niż 2.
+
+		       Napisz funkcję rysującą obraz zbioru Mandelbrota na
+		       płaszczyźnie. Wykorzystaj moduł Graphics do rysowania. Szkielet
+		       programu wygląda następująco:
+<pre>
+  #load "graphics.cma";;
+  open Graphics;;
+  
+  let display () =
+  open_graph " 640x640";
+  (* funkcje rysujące *)
+  let _ = read_key () in close_graph()
+</pre> Pozostałe potrzebne funkcje
+to <tt>set_color : color -> unit</tt>,
+ustalająca kolor pędzla, i <tt>plot : int -> int
+  -> unit</tt>, rysujący punkt bieżącego koloru w
+miejscu o zadanych współrzędnych. Aby zobaczyć
+efekt, dokonaj skalowania współrzędnych rysunku
+tak, by okno o rozmiarze 640x640 przedstawiało
+wycinek płaszczyzny w granicach przedziału
+<-2.,2.> na obu osiach OX i OY.
+  <a href="http://caml.inria.fr/pub/docs/manual-ocaml/manual039.html">Więcej o module Graphics.</a>
+</td>
+</tr>
+	      </tbody>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <table cellpadding="20" width="100%">
+	      <tbody>
+		<tr>
+		  <th>
+		    Część II
+		  </th>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 3 (4p.)</h4>  
+		    Załóżmy, że w pliku
+		    "studenci.db" przechowywane są dane o wynikach studentów.  Każda linia
+		    w pliku opisuje jednego studenta, wszystkie linie mają ten sam format
+		    i zawierają pola: imię, nazwisko, numer indeksu i liczba punktów
+		    otrzymanych za pewien projekt. Pola są oddzielone dwukropkami. Pole
+		    zawierające liczbę punktów może być puste, jak w przykładzie:
+		    "Adam:Kowalski:201108:" Napisz program, który wczytuje dane z pliku
+		    "studenci.db" do odpowiednio zdefiniowanej struktury danych oraz
+		    zaimplementuj następujące operacje na tej bazie danych:
+		    <ul> 
+		      <li> sortowanie bazy według liczby punktów oraz według nazwiska studenta </li>
+		      <li> wybór rekordów, dla których pole zdobytych punktów jest niepuste </li> 
+		      <li> obliczenie średniej liczby zdobytych punktów </li>
+		      <li> drukowanie całej zawartości bazy danych </li> 
+		    </ul> 
+		    Funkcje powinny drukować wyniki na standardowe wyjście lub do pliku; zadbaj o ładny format wydruku. 
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <h4>Zadanie 4 (4p.)</h4>
+		    Rozwiąż problem Józefa, tj. zadanie 4 z listy kontrolnej do wykładu 6.
+		  </td>
+		</tr>
+	      </tbody>
+	    </table>
+	  </td>
+	</tr>
+</tbody>
+</table>
+
+</body></html>
