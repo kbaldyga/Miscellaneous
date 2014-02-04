@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pacmak", "pacmak\pacmak.csproj", "{49FFF4D7-0991-4171-8C7F-58F832359886}"
+EndProject
+Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "models", "models\models.fsproj", "{8476437B-1C55-4722-BA84-D442D06B681D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		AppStore|x86 = AppStore|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49FFF4D7-0991-4171-8C7F-58F832359886}.AppStore|x86.ActiveCfg = AppStore|x86
+		{49FFF4D7-0991-4171-8C7F-58F832359886}.AppStore|x86.Build.0 = AppStore|x86
+		{49FFF4D7-0991-4171-8C7F-58F832359886}.Debug|x86.ActiveCfg = Debug|x86
+		{49FFF4D7-0991-4171-8C7F-58F832359886}.Debug|x86.Build.0 = Debug|x86
+		{49FFF4D7-0991-4171-8C7F-58F832359886}.Release|x86.ActiveCfg = Release|x86
+		{49FFF4D7-0991-4171-8C7F-58F832359886}.Release|x86.Build.0 = Release|x86
+		{8476437B-1C55-4722-BA84-D442D06B681D}.AppStore|x86.ActiveCfg = Release|Any CPU
+		{8476437B-1C55-4722-BA84-D442D06B681D}.AppStore|x86.Build.0 = Release|Any CPU
+		{8476437B-1C55-4722-BA84-D442D06B681D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8476437B-1C55-4722-BA84-D442D06B681D}.Debug|x86.Build.0 = Debug|Any CPU
+		{8476437B-1C55-4722-BA84-D442D06B681D}.Release|x86.ActiveCfg = Release|Any CPU
+		{8476437B-1C55-4722-BA84-D442D06B681D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = pacmak\pacmak.csproj
+	EndGlobalSection
+EndGlobal

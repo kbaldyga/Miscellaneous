@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "models", "models.fsproj", "{8476437B-1C55-4722-BA84-D442D06B681D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8476437B-1C55-4722-BA84-D442D06B681D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8476437B-1C55-4722-BA84-D442D06B681D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8476437B-1C55-4722-BA84-D442D06B681D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8476437B-1C55-4722-BA84-D442D06B681D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = models.fsproj
+	EndGlobalSection
+EndGlobal
